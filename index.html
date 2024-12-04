@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答案之书 - 探索你的答案</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 初始提示框 -->
+        <div class="prompt-box" id="promptBox">
+            <div class="star-dust"></div>
+            <p>告诉我你的问题</p>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="search-box hidden" id="searchBox">
+            <input type="text" id="questionInput" placeholder="在此输入你的问题...">
+            <button id="exploreBtn">
+                <svg class="hexagram-icon" viewBox="0 0 24 24">
+                    <!-- 六芒星SVG路径 -->
+                    <path d="M12 2L14.5 9H21L15.5 13L18 20L12 16L6 20L8.5 13L3 9H9.5L12 2Z"/>
+                </svg>
+                <span>探索</span>
+            </button>
+        </div>
+
+        <!-- 飞机动画容器 -->
+        <div class="plane-container hidden" id="planeContainer">
+            <div class="plane"></div>
+            <div class="trail"></div>
+        </div>
+
+        <!-- 书籍容器 -->
+        <div class="book-container hidden" id="bookContainer">
+            <div class="book">
+                <div class="book-cover">
+                    <div class="runes"></div>
+                </div>
+                <div class="book-pages">
+                    <div class="answer-page">
+                        <div class="answer-content" id="answerContent"></div>
+                        <div class="action-buttons">
+                            <button class="share-btn" id="shareBtn">
+                                <svg class="dove-icon" viewBox="0 0 24 24">
+                                    <!-- 白鸽SVG路径 -->
+                                    <path d="M12 2L9 9H2L7 14L5 21L12 17L19 21L17 14L22 9H15L12 2Z"/>
+                                </svg>
+                            </button>
+                            <button class="ask-again-btn" id="askAgainBtn">
+                                <svg class="question-icon" viewBox="0 0 24 24">
+                                    <!-- 问号SVG路径 -->
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+    <audio id="searchSound" src="sounds/search.mp3" preload="auto"></audio>
+    <audio id="planeSound" src="sounds/plane.mp3" preload="auto"></audio>
+    <audio id="pageSound" src="sounds/page.mp3" preload="auto"></audio>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
